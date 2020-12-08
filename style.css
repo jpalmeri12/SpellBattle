@@ -1,0 +1,161 @@
+@font-face {
+    font-family: "FuturaBook";
+    src: url("fonts/FuturaPTBook.otf");
+}
+
+@font-face {
+    font-family: "FuturaMedium";
+    src: url("fonts/FuturaPTMedium.otf");
+}
+
+@font-face {
+    font-family: "FuturaDemi";
+    src: url("fonts/FuturaPTDemi.otf");
+}
+
+@font-face {
+    font-family: "FuturaBold";
+    src: url("fonts/FuturaPTBold.otf");
+}
+
+@font-face {
+    font-family: "FuturaHeavy";
+    src: url("fonts/FuturaPTHeavy.otf");
+}
+
+@font-face {
+    font-family: "Logic";
+    src: url("fonts/logic.otf");
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    overflow: hidden;
+    background-color: #f2f2f2;
+    user-select: none;
+    -webkit-user-select: none;
+}
+
+input {
+    padding: 0;
+}
+
+#stage {
+    position: absolute;
+    background-color: white;
+    overflow: hidden;
+}
+
+.screenBox {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    visibility: hidden;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        visibility: visible;
+    }
+    to {
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
+.anim_fadeIn {
+    animation: fadeIn .25s linear normal forwards;
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+        visibility: visible;
+    }
+    to {
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
+.anim_fadeOut {
+    animation: fadeOut .25s linear normal forwards;
+}
+
+#grid {
+    width: 4rem;
+    height: 4rem;
+    left: 1rem;
+    top: 2rem;
+    border-radius: .1rem;
+    background-color: #e0e0e0;
+    position: absolute;
+    overflow: hidden;
+}
+
+.tile {
+    width: 1rem;
+    height: 1rem;
+    position: absolute;
+    opacity: 0;
+}
+
+.tile .bg {
+    width: .9rem;
+    height: .9rem;
+    left: .05rem;
+    top: .05rem;
+    position: absolute;
+    border-radius: .1rem;
+}
+
+.tile .panel {
+    width: .9rem;
+    height: .3rem;
+    left: .05rem;
+    top: .65rem;
+    position: absolute;
+    background-color: #373542;
+    border-radius: .1rem;
+}
+
+.tile .letter {
+    width: 100%;
+    position: absolute;
+    font-family: "FuturaDemi";
+    color: white;
+    font-size: .55rem;
+    text-align: center;
+}
+
+.tile .power, .coins {
+    width: .35rem;
+    top: .65rem;
+    position: absolute;
+    font-family: "FuturaDemi";
+    font-size: .25rem;
+    text-align: center;
+}
+
+.tile .power {
+    left: .05rem;
+    color: #ff8080;
+}
+
+.tile .coins {
+    left: .6rem;
+    color: #f8faa0;
+}
+
+.tile .icon {
+    width: .2rem;
+    height: .2rem;
+    left: .4rem;
+    top: .7rem;
+    position: absolute;
+    background-color: #373542;
+    border-radius: 50%;
+}
