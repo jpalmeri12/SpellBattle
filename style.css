@@ -103,6 +103,19 @@ input {
     opacity: 0;
 }
 
+.selected {
+    animation: anim_selected .5s alternate infinite;
+}
+
+@keyframes anim_selected {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: .5;
+    }
+}
+
 .tile .bg {
     width: .9rem;
     height: .9rem;
@@ -158,4 +171,48 @@ input {
     position: absolute;
     background-color: #373542;
     border-radius: 50%;
+}
+
+#base {
+    width: 6rem;
+    height: 1rem;
+    top: 7rem;
+    position: absolute;
+    background-color: #373542;
+}
+
+#base .word {
+    color: #ff5a47;
+    width: 4rem;
+    left: 1rem;
+    text-align: center;
+    top: .5rem;
+    position: absolute;
+    transform: translateY(-50%);
+    font-size: .5rem;
+    font-family: "FuturaDemi";
+}
+
+#base .word.isWord {
+    color: #5bd47f;
+}
+
+#base .reset {
+    width:.75rem;
+    height: .75rem;
+    left: 5.125rem;
+    top: .125rem;
+    position: absolute;
+    background-image: url(img/reset.svg);
+}
+
+.resetOff {
+    opacity: .25;
+    transform: scale(.75);
+}
+
+.img {
+    background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
 }
