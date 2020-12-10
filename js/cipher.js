@@ -50,3 +50,9 @@ var heapsPermute = function (array, output, n) {
     }
   }
 };
+
+$(window).bind('touchend', function (e) {
+    console.log(e);
+    e.preventDefault();
+    $(e.target).click();
+});
